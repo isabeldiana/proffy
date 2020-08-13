@@ -1,0 +1,61 @@
+:root {
+    --color-background: #F0F0F7;
+    --color-primary-lighter: #a52b2b;
+    --color-primary-light: #880808;
+    --color-primary: #000020;
+    --color-primary-dark: #1a4380;
+    --color-primary-darker: #071d64;
+    --color-secondary: #308ca3;
+    --color-secondary-dark: #1262a3;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #c2daff;
+    --color-text-title: #9e0404;
+    --color-text-complement: #ce9c14;
+    --color-text-base: #3c5aad;
+    --color-line-in-white: #ffffff;
+    --color-input-background: #fcfbf8;
+    --color-button-text: #f0dfdf;
+    --color-box-base: #c6ecf3;
+    --color-box-footer: #eeeef7;
+    --color-small-info: #C1BCCC;
+
+
+    font-size: 60%; /* controle das medidas rem */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    height: 100vh; 
+}
+
+body{
+    background: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,
+input,
+button,
+textarea{
+    font-weight: 500, 1.6rem poppins;
+    color: var(--color-text-base);
+}
+
+#container{
+    width: 90vw;
+    max-width: 700px;
+}
+
+@media(min-width: 700px){
+    :root{
+        font-size: 62.5%;
+    }
+}
