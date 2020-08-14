@@ -7,10 +7,10 @@ module.exports = async function(db, {proffyValue, classValue, classScheduleValue
             whatsapp,
             bio
         ) VALUES (
-            "${proffyValue.whatsapp}",
-            "${proffyValue.bio}",
             "${proffyValue.name}",
-            "${proffyValue.avatar}"
+            "${proffyValue.avatar}",
+            "${proffyValue.whatsapp}",
+            "${proffyValue.bio}"
         );
         `)
 
@@ -50,4 +50,6 @@ module.exports = async function(db, {proffyValue, classValue, classScheduleValue
 
         //Executa todos os db.runs das class_schedules
         await Promise.all(insertedAllClassScheduleValues)
+
+        
 }

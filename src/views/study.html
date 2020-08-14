@@ -38,8 +38,8 @@
                              </select>
                          </div>
                          <div class="select-block">
-                            <label for="subject">Dia da semana</label>
-                            <select name="subject" id="subject">
+                            <label for="weekday">Dia da semana</label>
+                            <select name="weekday" id="weekday">
                                 <option value="" disabled="" hidden="">Selecione uma opção</option>
 
                                 {%for weekday in weekdays %}
@@ -59,7 +59,9 @@
              </header>
 
              <main>
-
+                {% if proffys == "" %}
+        <p class="no-results">Nenhum professor encontrado com a sua pesquisa</p>
+      {% else %}
                 {%for proffy in proffys %}
                 <article class="teacher-item">
                     <header>
@@ -83,6 +85,7 @@
                    </footer>
                    </article>
                    {%endfor%}
+                   {%endif%}
              </main>
         </div>
         
